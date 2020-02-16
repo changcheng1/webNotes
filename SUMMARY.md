@@ -6,3 +6,6 @@
     * [正则](/web/regExp/index.md)
 * [Node]()
     * [node基础语法](/node/node.md)
+    * [mysql](/node/mysql.md)
+    * [redis](/node/redis.md)
+    * [tooken/session/cookie](/node/token.md)
