@@ -166,7 +166,7 @@
 
 ##7. http-proxy
 
-+ 常见项目当中的解决跨域问题就是配置proxtT使用的就是http-proxy-middleware插件
++ 常见项目当中的解决跨域问题就是配置proxy使用的就是http-proxy-middleware插件
 
 ##8. nginx
 

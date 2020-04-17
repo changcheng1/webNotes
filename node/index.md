@@ -1,26 +1,28 @@
-# koa2基础架构
+<!--
+ * @Author: your name
+ * @Date: 2020-02-24 21:22:58
+ * @LastEditTime: 2020-04-08 11:03:51
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /webNotes/node/index.md
+ -->
+
+# koa2 基础架构
 
 ## koa-generator
-+ 异步库 npm install -g koa-generator
 
-## 安装koa2模板
+- 异步库 npm install -g koa-generator
 
-+ koa2 -e name
+## 安装 koa2 模板
 
-## koa2项目所需插件
+- koa2 -e name
 
-+ cross-env node本地环境变量
+## koa2 项目所需插件
 
-## 安装mysql
+- cross-env node 本地环境变量
 
-+ 版本 5.7.23
+## 安装 mysql
 
-+ 安装 mysqlworkbench可视化工具
+- 版本 5.7.23
 
-## 安装
-```javaScript
-    // 断言 
-    function sum(a,b){return a+b}
-    console.assert(sum(1,2) == 4,'报错')
-```
-
+- 安装 mysqlworkbench 可视化工具

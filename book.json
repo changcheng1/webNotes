@@ -13,7 +13,8 @@
         "tbfed-pagefooter",
         "popup",
         "-sharing",
-        "sharing-plus"
+        "sharing-plus",
+        "expandable-chapters"
     ],
     "pluginsConfig": {
         "insert-logo": {
