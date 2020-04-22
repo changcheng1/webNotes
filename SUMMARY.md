@@ -1,14 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-24 21:22:58
- * @LastEditTime: 2020-04-17 17:32:32
+ * @LastEditTime: 2020-04-22 16:59:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /weibo/Users/changcheng/Downloads/webNotes/SUMMARY.md
  -->
 
-- [es6](web/es6/解构赋值.md)
+- es6
 
+  - [解构赋值](web/es6/解构赋值.md)
   - [array](web/es6/array.md)
   - [class](web/es6/class.md)
   - [const & let](web/es6/const&let.md)
@@ -27,23 +28,28 @@
   - [symbol](web/es6/symbol.md)
   - [defineProperty](web/es6/defineProperty.md)
 
-- [node 基础语法](node/node.md)
+- node 基础语法
 
+  - [简介](node/node.md)
   - [常用架构](node/index.md)
   - [mysql](node/mysql.md)
   - [redis](node/redis.md)
   - [tooken/session/cookie](node/token.md)
 
+- http 与 https
+
+  - [http](http/index.md)
+
+- [Dom](web/dom/index.md)
+- [弹性盒子](web/flex/index.md)
+- [数组方法](web/arr/index.md)
+- [字符串方法](web/string/index.md)
 - [隐式类型转换](web/typeOf/index.md)
 - [原型链](web/prototype/index.md)
 - [函数柯里化](web/curring.md)
 - [发布订阅/高阶函数](web/fun/index.md)
 - [js 线程](web/eventLoop/eventLoop.md)
 - [跨域](web/jsonp/index.md)
-- [数组方法](web/arr/index.md)
-- [Dom](web/dom/index.md)
-- [弹性盒子](web/flex/index.md)
-- [字符串方法](web/string/index.md)
 - [nginx](web/nginx/index.md)
 - [正则](web/regExp/index.md)
 - [mvvm](web/mvvm/index.md)
