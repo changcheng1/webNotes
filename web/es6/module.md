@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-11 10:52:26
- * @LastEditTime: 2020-03-26 10:47:53
+ * @LastEditTime: 2020-05-15 15:01:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webNotes/web/es6/module.md
@@ -12,7 +12,7 @@
 
 ```javaScript
 
-// Common.js模块输入的的是只的缓存，不存在动态更新
+// Common.js模块输入的的是值的缓存，不存在动态更新
 export var foo = 'bar';
 setTimeout(() => foo = 'baz', 500);
 
@@ -45,4 +45,45 @@ export {add as default};
 import { default as foo } from 'modules';
 // 等同于
 // import foo from 'modules';
+```
+
+### Es6模块化与commonJs的差异
+
+commonJs模块输出的是一个值得拷贝，Es6模块输出的是值得引用
+commonJs模块是运行时加载，Es6模块是编译时输出接口
+commonJs可以给模块中的值重新复制，Es6模块不能重新赋值
+commonJs可以在js的任何位置中引入，import只能在js的顶部
+commonJs模块无论加载多少次，都只会在第一次加载时运行一次，以后再加载就返回第一次的运行结果
+1. commonJs
+
++ commonJs输出的是值的拷贝，模块内部的变化影响不到这个值，因为commonJs内部会缓存值
+
+```javaScript
+  // 1.js
+  var count = 3;
+  function incCounter(){
+    count++
+  }
+  module.exports = {
+    count,
+    incCounter
+  }
+
+  // main.js
+  var mod = require('./1.js')
+  console.log(mod.counter)  // 3
+  mod.incCounter()
+  console.log(mod.counter)  // 3
+
+```
+
+2. Es6模块化（import）
+
++ 遇到模块加载命令import，就会生成一个只读引用，等到脚本就真正执行的时候，再根据这个引用到模块当中去取值，原始的值改变了，import的值也会改变，因此Es6的值是动态引用，并且不会缓存值，模块内部的变量绑定所在模块
+
+```javaScript
+  export var conut = 3;
+  export function incCounter(){
+    conut ++
+  }
 ```

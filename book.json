@@ -14,7 +14,8 @@
         "popup",
         "-sharing",
         "sharing-plus",
-        "expandable-chapters"
+        "expandable-chapters",
+        "favicon-absolute"
     ],
     "pluginsConfig": {
         "insert-logo": {
@@ -26,6 +27,10 @@
             "copyright": "Copyright &copy dsx2016.com 2019",
             "modify_label": "该文章修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "favicon-absolute": {
+            "favicon": "/favicon.ico",
+            "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png"
         },
         "sharing": {
             "douban": true,

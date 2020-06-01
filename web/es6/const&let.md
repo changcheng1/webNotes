@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-11 10:49:18
- * @LastEditTime: 2020-03-23 22:26:06
+ * @LastEditTime: 2020-05-18 16:45:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webNotes/web/es6/const&let.md
@@ -52,3 +52,54 @@ let a = 3; // Identifier 'a' has already been declared
 }
 console.log(a);
 ```
+
+1.let/const和{}会劫持当前的作用域
+
+2.Es6的let和const不存在变量提升
+
+```javaScript
+    a         // Cannot access 'a' before initialization
+    const a = 3
+```
+
+3.什么是暂时性死区,在let声明变量之前，该变量都是不可用的。
+
+```javaScript
+    var temp = 3;
+    if(true){
+        console.log(temp)  //Cannot access 'temp' before initialization
+        let temp = 2;
+    }
+
+    function bar(x = y, y = 2) {
+        return [x, y];
+    }
+
+    bar(); // 报错
+```
+
+4.let不允许重复声明
+
+5.块级作用域中的函数声明
+
+```javaScript
+    (function () {
+        // 相当于  vat f = undefined
+        if (false) {
+            // 重复声明一次函数f
+            function f() { console.log('I am inside!'); }  // f is not a function
+        }
+
+        f();
+    }());
+```
+
+6. const如果引用的地址是对象也可以修改
+
+```javaScript
+    const a = {c:1}
+    a.c = 3
+    console.log(a.c)  // 3
+```
+
+

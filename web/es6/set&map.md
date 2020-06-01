@@ -1,27 +1,12 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-11 10:54:57
- * @LastEditTime: 2020-03-11 10:55:07
+ * @LastEditTime: 2020-05-18 16:54:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webNotes/web/es6/set&map.md
  -->
 ```javaScript
-  import { log } from "util";
-
-{
-    // new Set():声明set数据结构
-    let list = new Set();
-    list.add(5)
-    list.add(7)
-    console.log('size',list.size) // size 2
-}
-{
-    // set中放入数组
-    let arr = [1,2,3,4,5]
-    let list = new Set(arr)
-    console.log('szie',list.size) // size 5
-}
 {
     // set中数据的唯一性
     let list = new Set()
@@ -54,7 +39,6 @@
     }
     for(let [key,value] of list.entries()){
         console.log('entries',key,value); // entries add add entries delete delete entries clear claer entries has has
-        
     }
     list.forEach(function(item){console.log(item); // add delete clear has
     })

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-04-17 17:32:40
- * @LastEditTime: 2020-04-17 17:40:43
+ * @LastEditTime: 2020-04-23 15:36:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webNotes/web/algorithm.md
@@ -30,7 +30,7 @@ console.log(add(1, 2, 3) == 6)
 console.log(add(1, 2)(3) == 6)
 ```
 
-### 冒泡排序
+### 冒泡排序:后一个和前一个比较，后一个小于前一个，就交换位置
 
 ```javaScript
 var arr = [5, 2, 33, 12, 9, 1]
@@ -55,7 +55,7 @@ function sort(arr) {
 console.log(sort(arr))
 ```
 
-### 选择排序
+### 选择排序:默认第一个是最小的，然后每次拿当前数组剩余的最小值，和当前的最小值进行交换
 
 ```javaScript
 
@@ -79,6 +79,28 @@ function sort(arr) {
 }
 
 console.log(sort(arr))
+```
+
+### 快速排序:数组切割成三部分，取出中间的值，小于的值放在左边，大于的值放在右边，然后递归
+
+```javaScript
+function quick(arr) {
+    if (arr.length <= 1) {
+        return arr
+    }
+    let middleIndex = Math.floor(arr.length / 2)
+    let middleVal = arr.splice(middleIndex, 1)
+    let leftArr = [],
+        rightArr = []
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] < middleVal ? leftArr.push(arr[i]) : rightArr.push(arr[i])
+    }
+    return quick(leftArr).concat(middleVal, quick(rightArr))
+}
+
+let arr = [8, 9, 1, 7, 2, 3, 5, 4, 6, 0]
+console.log(quick(arr))
+
 ```
 
 ### 插入排序
@@ -130,30 +152,6 @@ insert(arr)
 let arr = [8, 9, 1, 7, 2, 3, 5, 4, 6, 0]
 arr.shell()
 console.log(arr)
-```
-
-### 快速排序
-
-```javaScript
-function quick(arr) {
-    if (arr.length <= 1) {
-        return arr
-    }
-    let middleIndex = Math.floor(arr.length / 2)
-    console.log('arr', arr.splice(middleIndex, 1))
-    let middleVal = arr.splice(middleIndex, 1)
-    let leftArr = [],
-        rightArr = []
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] < middleVal ? leftArr.push(arr[i]) : rightArr.push(arr[i])
-    }
-    console.log('leftArr', leftArr)
-    return quick(leftArr).concat(middleVal, quick(rightArr))
-}
-
-let arr = [8, 9, 1, 7, 2, 3, 5, 4, 6, 0]
-console.log(quick(arr))
-
 ```
 
 ### 数组扁平化
