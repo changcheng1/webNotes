@@ -70,3 +70,4 @@
 - [数据类型](web/data.md)
 - [ajax](web/ajax.md)
 - [常见算法题](web/algorithm.md)
+- [前端错误监控](web/monitor.md)
